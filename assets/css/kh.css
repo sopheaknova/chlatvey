@@ -1,0 +1,15 @@
+body {
+	font: 13px/1.5 'Suwannaphum', Arial;
+}
+
+#menu-bar, #email-subscribe form label, #email-subscribe form .youremail,
+h1, h2, h3, h4, h5, h6, blockquote, 
+.wp-caption p.wp-caption-text, .featured-home .caption h4 a, .searchtxt,
+form.contact-page .button, .search-block #s,
+input[type="submit"], button{
+	font-family:'Suwannaphum', Arial;
+}
+
+.search-block #s {font-size:10px; line-height:10px;}
+
+#email-subscribe form .youremail {width:318px;}

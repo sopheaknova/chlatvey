@@ -1,0 +1,877 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Chlatvey\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-17 09:07+0700\n"
+"PO-Revision-Date: 2013-09-17 09:13+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: 404.php:12
+msgid "Uh oh, we’ve lost that page!"
+msgstr ""
+
+#: 404.php:16 page.php:30 search.php:15 single.php:41
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: archive.php:17
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:19
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:21
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:23
+msgid "Archives"
+msgstr ""
+
+#: archive.php:32 category.php:22 page.php:27 search.php:12 single.php:38
+msgid "Nothing Found"
+msgstr ""
+
+#: archive.php:59 category.php:59
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for..."
+msgstr ""
+
+#: category.php:15
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: category.php:27
+msgid "Feed Subscription"
+msgstr ""
+
+#: footer.php:24
+msgid "Scroll to top"
+msgstr ""
+
+#: page.php:20 single.php:31
+msgid "Pages:"
+msgstr ""
+
+#: searchform.php:8
+msgid "Search this site"
+msgstr ""
+
+#: searchform.php:15
+msgid "Search"
+msgstr ""
+
+#: sidebar-left.php:13 template-user-profile.php:110
+msgid "Username"
+msgstr ""
+
+#: sidebar-left.php:14 template-user-profile.php:114
+#: library/meta-box/demo/demo.php:108
+msgid "Password"
+msgstr ""
+
+#: sidebar-left.php:15
+msgid "Remember Me"
+msgstr ""
+
+#: sidebar-left.php:16
+msgid "Log In"
+msgstr ""
+
+#: sidebar-left.php:20
+msgid "Sign In"
+msgstr ""
+
+#: sidebar-left.php:49
+msgid "Edit profile"
+msgstr ""
+
+#: sidebar-left.php:50
+msgid "Logout"
+msgstr ""
+
+#: sidebar-left.php:52
+msgid "New gift fast quiz"
+msgstr ""
+
+#: sidebar-left.php:52
+msgid " Gifts"
+msgstr ""
+
+#: sidebar-left.php:53
+msgid "Weekly quiz score"
+msgstr ""
+
+#: sidebar-left.php:53
+msgid " points"
+msgstr ""
+
+#: sidebar.php:9
+msgid "About Right Sidebar"
+msgstr ""
+
+#: sidebar.php:10
+msgid ""
+"To edit this sidebar, go to admin backend's <strong><em>Appearance -&gt; "
+"Widgets</em></strong> and place widgets into the <strong><em>Default "
+"Sidebar</em></strong> Area"
+msgstr ""
+
+#: template-register.php:69
+msgid "Please check your email for login details."
+msgstr ""
+
+#: template-register.php:80
+msgid "Username:"
+msgstr ""
+
+#: template-register.php:87
+msgid "E-mail address:"
+msgstr ""
+
+#: template-user-profile.php:55
+msgid "This e-mail is already in use, please use another one."
+msgstr ""
+
+#: template-user-profile.php:55
+msgid "Back"
+msgstr ""
+
+#: template-user-profile.php:118 library/meta-box/demo/demo.php:239
+msgid "Email"
+msgstr ""
+
+#: template-user-profile.php:132
+msgid "Frist name"
+msgstr ""
+
+#: template-user-profile.php:137
+msgid "Last name"
+msgstr ""
+
+#: template-user-profile.php:141
+msgid "Gender"
+msgstr ""
+
+#: template-user-profile.php:148
+msgid "Phone number"
+msgstr ""
+
+#: template-user-profile.php:152 library/meta-box/demo/map.php:13
+msgid "Address"
+msgstr ""
+
+#: template-user-profile.php:156
+msgid "About"
+msgstr ""
+
+#: library/admin/index.php:109
+msgid "Theme Options"
+msgstr ""
+
+#: library/admin/classes/class.options_machine.php:556
+msgid "Last Backup : "
+msgstr ""
+
+#: library/admin/front-end/options.php:43
+#: library/admin/front-end/options.php:67
+msgid "Save All Changes"
+msgstr ""
+
+#: library/admin/front-end/options.php:68
+msgid "Options Reset"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:67
+msgid "Quizzes"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:68
+msgid "Question"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:69
+msgid "Add new"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:70
+msgid "Add new question"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:71
+msgid "New questions"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:72
+msgid "All questions"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:73
+msgid "Edit question"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:74
+msgid "View question"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:75
+msgid "Search question"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:76
+msgid "No question found"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:77
+msgid "No question found in trash"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:101
+msgid "Name"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:103
+#: library/meta-box/demo/date-time-js-options.php:15
+msgid "Date"
+msgstr ""
+
+#: library/custom-posts/cp-quizzes.php:104
+msgid "Created By"
+msgstr ""
+
+#: library/custom-posts/ct-taxonomies.php:51
+#: library/custom-posts/ct-taxonomies.php:52
+msgid "Quiz category"
+msgstr ""
+
+#: library/custom-posts/ct-taxonomies.php:53
+msgid "Search categories"
+msgstr ""
+
+#: library/custom-posts/ct-taxonomies.php:54
+msgid "All categories"
+msgstr ""
+
+#: library/custom-posts/ct-taxonomies.php:55
+msgid "Parent category"
+msgstr ""
+
+#: library/custom-posts/ct-taxonomies.php:56
+msgid "Edit category"
+msgstr ""
+
+#: library/custom-posts/ct-taxonomies.php:57
+msgid "Update category"
+msgstr ""
+
+#: library/custom-posts/ct-taxonomies.php:58
+msgid "Add New Quiz Category"
+msgstr ""
+
+#: library/custom-posts/ct-taxonomies.php:59
+msgid "New Quiz Category"
+msgstr ""
+
+#: library/custom-posts/custom-posts.php:23
+msgid "Enter question"
+msgstr ""
+
+#: library/functions/setup-theme.php:57
+msgid "Left Main Menu"
+msgstr ""
+
+#: library/functions/setup-theme.php:58
+msgid "Right Main Menu"
+msgstr ""
+
+#: library/functions/setup-theme.php:59
+msgid "Footer Menu"
+msgstr ""
+
+#: library/functions/setup-theme.php:247
+#, php-format
+msgid "Search results for %s"
+msgstr ""
+
+#: library/functions/setup-theme.php:250 library/functions/setup-theme.php:264
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: library/functions/theme-functions.php:30
+#: library/functions/theme-functions.php:61
+msgid "Add Main menu"
+msgstr ""
+
+#: library/functions/theme-functions.php:93
+msgid "Add Footer menu"
+msgstr ""
+
+#: library/functions/theme-functions.php:106
+#, php-format
+msgid ""
+"<span class=\"posted-on\">Posted on </span><a href=\"%1$s\" title=\"%2$s"
+"\"><time class=\"entry-date\" datetime=\"%3$s\">%4$s</time></a><span class="
+"\"by-author\"> by </span><span class=\"author vcard\"><a class=\"url fn n\" "
+"href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span><span class="
+"\"posted-in\"> in </span>%8$s "
+msgstr ""
+
+#: library/functions/theme-functions.php:112
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: library/functions/theme-functions.php:117
+msgid " with "
+msgstr ""
+
+#: library/functions/theme-functions.php:118
+#: library/functions/theme-functions.php:138
+msgid "0 Comments"
+msgstr ""
+
+#: library/functions/theme-functions.php:118
+#: library/functions/theme-functions.php:138
+msgid "1 Comment"
+msgstr ""
+
+#: library/functions/theme-functions.php:118
+#: library/functions/theme-functions.php:138
+msgid "% Comments"
+msgstr ""
+
+#: library/functions/theme-functions.php:120
+msgid "Edit"
+msgstr ""
+
+#: library/functions/theme-functions.php:129
+#, php-format
+msgid ""
+"<a href=\"%1$s\" title=\"%2$s\"><time class=\"entry-date\" datetime=\"%3$s\">"
+"%4$s</time></a><span class=\"sep\"> |  </span>"
+msgstr ""
+
+#: library/functions/theme-functions.php:137
+msgid " | "
+msgstr ""
+
+#: library/functions/theme-functions.php:276
+msgid "You must login to play quiz."
+msgstr ""
+
+#: library/functions/theme-functions.php:391
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: library/functions/theme-functions.php:553
+#: library/functions/theme-functions.php:637
+msgid "Previous"
+msgstr ""
+
+#: library/functions/theme-functions.php:563
+#: library/functions/theme-functions.php:647
+msgid "Next"
+msgstr ""
+
+#: library/functions/theme-functions.php:674
+#: library/functions/theme-functions.php:715
+msgid "Top 10 weekly quiz"
+msgstr ""
+
+#: library/functions/theme-functions.php:696
+#: library/functions/theme-functions.php:742
+msgid "Score: "
+msgstr ""
+
+#: library/functions/theme-functions.php:704
+#: library/functions/theme-functions.php:748
+msgid "<p>No users found in the top of weekly quiz</p>"
+msgstr ""
+
+#: library/functions/theme-functions.php:957
+msgid "forgot password?"
+msgstr ""
+
+#: library/functions/theme-functions.php:963
+msgid "Create Account"
+msgstr ""
+
+#: library/meta-box/meta-options.php:28
+msgid "Answer Options"
+msgstr ""
+
+#: library/meta-box/meta-options.php:35
+msgid "Choose correct answer"
+msgstr ""
+
+#: library/meta-box/meta-options.php:40
+msgid "01"
+msgstr ""
+
+#: library/meta-box/meta-options.php:41
+msgid "02"
+msgstr ""
+
+#: library/meta-box/meta-options.php:42
+msgid "03"
+msgstr ""
+
+#: library/meta-box/meta-options.php:43
+msgid "04"
+msgstr ""
+
+#: library/meta-box/meta-options.php:53
+msgid "Answer 01"
+msgstr ""
+
+#: library/meta-box/meta-options.php:58
+msgid "enter answer 01 here"
+msgstr ""
+
+#: library/meta-box/meta-options.php:61
+msgid "Answer 02"
+msgstr ""
+
+#: library/meta-box/meta-options.php:66
+msgid "enter answer 02 here"
+msgstr ""
+
+#: library/meta-box/meta-options.php:69
+msgid "Answer 03"
+msgstr ""
+
+#: library/meta-box/meta-options.php:74
+msgid "enter answer 03 here"
+msgstr ""
+
+#: library/meta-box/meta-options.php:77
+msgid "Answer 04"
+msgstr ""
+
+#: library/meta-box/meta-options.php:82
+msgid "enter answer 04 here"
+msgstr ""
+
+#: library/meta-box/meta-options.php:94
+msgid "External Video Settings"
+msgstr ""
+
+#: library/meta-box/meta-options.php:100
+msgid "Video URL"
+msgstr ""
+
+#: library/meta-box/meta-options.php:104
+msgid "ex: http://www.youtube.com/watch?v=sdUUx5FdySs."
+msgstr ""
+
+#: library/meta-box/meta-options.php:115
+msgid "External Audio Settings"
+msgstr ""
+
+#: library/meta-box/meta-options.php:121
+msgid "Audio/Sound URL"
+msgstr ""
+
+#: library/meta-box/meta-options.php:125
+msgid "ex: https://soundcloud.com/loy9/loy9-radio-pro-81-all-my."
+msgstr ""
+
+#: library/meta-box/demo/all-custom-post-types.php:20
+msgid "Personal Information"
+msgstr ""
+
+#: library/meta-box/demo/all-custom-post-types.php:25
+msgid "Full name"
+msgstr ""
+
+#: library/meta-box/demo/better-include.php:16
+#: library/meta-box/demo/include-by-ID-or-page-template.php:8
+msgid "Meta Box Title"
+msgstr ""
+
+#: library/meta-box/demo/better-include.php:19
+#: library/meta-box/demo/include-by-ID-or-page-template.php:14
+msgid "Your images"
+msgstr ""
+
+#: library/meta-box/demo/date-time-js-options.php:11
+msgid "Date Time Picker With JS Options"
+msgstr ""
+
+#: library/meta-box/demo/date-time-js-options.php:21
+#: library/meta-box/demo/demo.php:184
+msgid "(yyyy-mm-dd)"
+msgstr ""
+
+#: library/meta-box/demo/date-time-js-options.php:23
+msgid "Select Date"
+msgstr ""
+
+#: library/meta-box/demo/date-time-js-options.php:24
+#: library/meta-box/demo/demo.php:185
+msgid "yy-mm-dd"
+msgstr ""
+
+#: library/meta-box/demo/date-time-js-options.php:30
+msgid "Datetime"
+msgstr ""
+
+#: library/meta-box/demo/date-time-js-options.php:41
+msgid "Time"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:34
+msgid "Standard Fields"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:53
+msgid "Text"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:57
+msgid "Text description"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:60
+msgid "Default text value"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:66
+msgid "Checkbox"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:74
+msgid "Radio"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:80 library/meta-box/demo/demo.php:91
+#: library/meta-box/demo/demo.php:233 library/meta-box/demo/demo.php:278
+msgid "Label1"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:81 library/meta-box/demo/demo.php:92
+#: library/meta-box/demo/demo.php:234 library/meta-box/demo/demo.php:279
+msgid "Label2"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:86 library/meta-box/demo/demo.php:273
+msgid "Select"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:97 library/meta-box/demo/demo.php:284
+msgid "Select an Item"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:104
+msgid "Hidden value"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:114
+msgid "Textarea"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:115
+msgid "Textarea description"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:132
+msgid "Password is required"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:133
+msgid "Password must be at least 7 characters"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:141
+msgid "Advanced Fields"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:147
+msgid "Heading"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:152
+msgid "Slider"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:157
+msgid "$"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:158
+msgid " USD"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:169
+msgid "Number"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:178
+msgid "Date picker"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:193
+msgid "Datetime picker"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:207
+msgid "Time picker"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:222
+msgid "Color picker"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:228
+msgid "Checkbox list"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:241
+msgid "Email description"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:247
+msgid "Range"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:249
+msgid "Range description"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:258
+msgid "URL"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:260
+msgid "URL description"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:266
+msgid "oEmbed"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:268
+msgid "oEmbed description"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:288
+msgid "Taxonomy"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:302
+msgid "Posts (Pages)"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:318
+msgid "WYSIWYG / Rich Text Editor"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:323
+msgid "WYSIWYG default value"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:339
+#: library/meta-box/demo/force-delete.php:15
+msgid "File Upload"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:345
+msgid "File Advanced Upload"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:353
+#: library/meta-box/demo/force-delete.php:22
+msgid "Image Upload"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:359
+#: library/meta-box/demo/force-delete.php:28
+msgid "Thickbox Image Upload"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:365
+#: library/meta-box/demo/force-delete.php:35
+msgid "Plupload Image Upload"
+msgstr ""
+
+#: library/meta-box/demo/demo.php:372
+msgid "Image Advanced Upload"
+msgstr ""
+
+#: library/meta-box/demo/force-delete.php:11
+msgid "Test Meta Box"
+msgstr ""
+
+#: library/meta-box/demo/map.php:9
+msgid "Google Map"
+msgstr ""
+
+#: library/meta-box/demo/map.php:15
+msgid "Hanoi, Vietnam"
+msgstr ""
+
+#: library/meta-box/demo/map.php:19
+msgid "Location"
+msgstr ""
+
+#: library/meta-box/inc/classes/meta-box.php:254
+msgid "Please correct the errors highlighted below and try again."
+msgstr ""
+
+#: library/meta-box/inc/classes/meta-box.php:428
+msgid "+"
+msgstr ""
+
+#: library/meta-box/inc/classes/meta-box.php:450
+msgid "&#8211;"
+msgstr ""
+
+#: library/meta-box/inc/fields/button.php:36
+msgid "Click me"
+msgstr ""
+
+#: library/meta-box/inc/fields/file-advanced.php:23
+msgid "Select Files"
+msgstr ""
+
+#: library/meta-box/inc/fields/file.php:19
+#, php-format
+msgid "You may only upload maximum %d file"
+msgstr ""
+
+#: library/meta-box/inc/fields/file.php:20
+#, php-format
+msgid "You may only upload maximum %d files"
+msgstr ""
+
+#: library/meta-box/inc/fields/file.php:70
+msgid "Error: Cannot delete file"
+msgstr ""
+
+#: library/meta-box/inc/fields/image-advanced.php:22
+msgid "Select Images"
+msgstr ""
+
+#: library/meta-box/inc/fields/image.php:64
+msgid "Order saved"
+msgstr ""
+
+#: library/meta-box/inc/fields/map.php:48
+msgid "Find Address"
+msgstr ""
+
+#: library/meta-box/inc/fields/post.php:54
+msgid "Post"
+msgstr ""
+
+#: library/meta-box/inc/fields/post.php:68
+#: library/meta-box/inc/fields/taxonomy.php:40
+#, php-format
+msgid "Select a %s"
+msgstr ""
+
+#: library/widgets/sidebar-generator.php:22
+msgid "Custom Widget Area"
+msgstr ""
+
+#: library/widgets/sidebar-generator.php:52
+msgid "Enter Name of the new Widget Area here"
+msgstr ""
+
+#: library/widgets/sidebar-generator.php:53
+msgid "Add Widget Area"
+msgstr ""
+
+#: library/widgets/widget-ads.php:54
+msgid "Ads 250x250"
+msgstr ""
+
+#: library/widgets/widget-ads.php:57
+msgid "Place Ads size 250px by 250px"
+msgstr ""
+
+#: library/widgets/widget-ads.php:81 library/widgets/widget-ads.php:180
+#: library/widgets/widget-ads.php:279 library/widgets/widget-ads.php:380
+msgid "Title"
+msgstr ""
+
+#: library/widgets/widget-ads.php:86 library/widgets/widget-ads.php:185
+#: library/widgets/widget-ads.php:284 library/widgets/widget-ads.php:385
+msgid "Image"
+msgstr ""
+
+#: library/widgets/widget-ads.php:94 library/widgets/widget-ads.php:193
+#: library/widgets/widget-ads.php:292 library/widgets/widget-ads.php:393
+msgid "Link"
+msgstr ""
+
+#: library/widgets/widget-ads.php:153
+msgid "Ads 250x125"
+msgstr ""
+
+#: library/widgets/widget-ads.php:156
+msgid "Place Ads size 250px by 125px"
+msgstr ""
+
+#: library/widgets/widget-ads.php:252
+msgid "Ads 960x120"
+msgstr ""
+
+#: library/widgets/widget-ads.php:255
+msgid "Place Ads size 960px by 120px"
+msgstr ""
+
+#: library/widgets/widget-ads.php:351
+msgid "Ads 460x120"
+msgstr ""
+
+#: library/widgets/widget-ads.php:354
+msgid "Place Ads size 460px by 120px"
+msgstr ""
+
+#: library/widgets/widget-category-post.php:9
+#: library/widgets/widget-category-post.php:50
+msgid "Category Posts"
+msgstr ""
+
+#: library/widgets/widget-category-post.php:12
+msgid "A widget show posts by category"
+msgstr ""
+
+#: library/widgets/widgets.php:10 library/widgets/widgets.php:12
+msgid "Sidebar Right"
+msgstr ""
+
+#: library/widgets/widgets.php:21 library/widgets/widgets.php:23
+msgid "Sidebar Left"
+msgstr ""
+
+#: library/widgets/widgets.php:32 library/widgets/widgets.php:34
+msgid "Top Sidebar"
+msgstr ""
+
+#: library/widgets/widgets.php:43 library/widgets/widgets.php:45
+msgid "Content Sidebar"
+msgstr ""
+
+#: library/widgets/widgets.php:54 library/widgets/widgets.php:56
+msgid "Footer Sidebar"
+msgstr ""
