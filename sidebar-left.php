@@ -43,7 +43,13 @@
 		
 		
 		echo '<div class="profile-photo">';
-		echo '<div class="post-thumbnail"><img src="' . $profile_img . '" /></div>';
+		echo '<div class="post-thumbnail"><a href="' . get_page_link($page->ID) . '">';
+		if ($profile_img) {
+			echo '<img src="' . $profile_img . '" />';
+		} else{
+			echo '<img src="' . SP_ASSETS_THEME.'images/chlatvey-profile.png" width="80" height="80" />';	
+		}
+		echo '</a></div>';
 		echo '</div>';
 		echo '<p>Hello, <strong>', $user_identity . '</strong><br />';
 		echo '<a href="' . get_page_link($page->ID) . '">' . __( 'Edit profile', SP_TEXT_DOMAIN ) . '</a><br />';

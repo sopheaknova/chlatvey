@@ -891,7 +891,11 @@ function sp_top_user_weekly_quiz(){
 				$profile_img = aq_resize( esc_attr( get_the_author_meta( 'image', $user->user_id ) ), 40, 40, true ); 
 				$output .= '<li>';
 		        $output .= '<div class="post-thumbnail">';
-		        $output .= '<img src="' . $profile_img . '" />';
+		        if ($profile_img):
+		        	$output .= '<img src="' . $profile_img . '" />';
+		        else:
+		        	$output .= '<img src="' . SP_ASSETS_THEME . 'images/chlatvey-profile.png" width="50" height="50" />';
+		        endif;
 		        $output .= '</div>';
 		        $output .= '<p>' . get_the_author_meta( 'nickname', $user->user_id ) . '<br />';
 				$output .= __('Score: ', SP_TEXT_DOMAIN ) . '<span class="score">' . get_the_author_meta( 'weekly_quiz_score', $user->user_id ) .'</span>';
@@ -937,8 +941,12 @@ function sp_top_user_weekly_quiz_temp(){
 			$profile_img = aq_resize( $user->image, 50, 50, true ); 
 			$output .= '<li>';
 	        $output .= '<div class="post-thumbnail">';
-	        $output .= '<img src="' . $profile_img . '" />';
-	        $output .= '</div>';
+	        if ($profile_img):
+	        	$output .= '<img src="' . $profile_img . '" />';
+	        else:
+	        	$output .= '<img src="' . SP_ASSETS_THEME . 'images/chlatvey-profile.png" width="50" height="50" />';
+	        endif;
+	       	$output .= '</div>';
 	        $output .= '<p>' . $user->display_name . '<br />';
 			$output .= '<span class="score">' . __('Score: ', SP_TEXT_DOMAIN ) . $user->weekly_quiz_score .'</span>';
 			$output .= '</p>';
