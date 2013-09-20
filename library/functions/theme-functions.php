@@ -456,7 +456,7 @@ function get_quiz_results() {
     	$first_name = get_the_author_meta( 'user_firstname', $this_user->ID );
     	$last_name = get_the_author_meta( 'user_lastname', $this_user->ID );
     	$email = get_the_author_meta( 'user_email', $this_user->ID );
-    	$phone = get_the_author_meta( 'user_firstname', $this_user->ID );
+    	$phone = get_the_author_meta( 'phone_number', $this_user->ID );
     	
 		update_user_meta( $this_user->ID , 'fast_quiz_win', ($fast_score+1) );
 		sp_send_mail_notification($first_name, $last_name, $email, $phone);
