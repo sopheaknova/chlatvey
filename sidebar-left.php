@@ -45,7 +45,8 @@
 		echo '<div class="profile-photo">';
 		echo '<div class="post-thumbnail"><a href="' . get_page_link($page->ID) . '">';
 		if ($profile_img) {
-			echo '<img src="' . $profile_img . '" />';
+			//echo '<img src="' . $profile_img . '" />';
+			echo '<img src="' . esc_attr( get_the_author_meta( 'image', $this_user->ID ) ) . '" width="80" height="80" />';
 		} else{
 			echo '<img src="' . SP_ASSETS_THEME.'images/chlatvey-profile.png" width="80" height="80" />';	
 		}

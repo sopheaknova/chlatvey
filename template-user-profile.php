@@ -43,7 +43,7 @@ if ($user_ID) {
 	            );
 	           	$attach_id = wp_insert_attachment( $attachment, $filename);
 	           	
-	           	//echo $profile_photo;
+	           	echo $profile_photo;
 	                                    
 	            update_user_meta($this_user->ID, "image", $profile_photo);
 	        }
@@ -125,7 +125,8 @@ $profile_page = $smof_data['user_profile'];
 	                <div class="post-thumbnail">
 	                <?php
 	                if ($profile_img) {
-						echo '<img src="' . $profile_img . '" />';
+						//echo '<img src="' . $profile_img . '" />';
+						echo '<img src="' . esc_attr( get_the_author_meta( 'image', $this_user->ID ) ) . '" width="80" height="80" />';
 					} else{
 						echo '<img src="' . SP_ASSETS_THEME.'images/chlatvey-profile.png" width="80" height="80" />';	
 					}
