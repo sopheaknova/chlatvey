@@ -3,30 +3,44 @@ Theme Name: NewsPlus
 Description: Used to style the TinyMCE editor.
 */
 
+@font-face {
+  font-family: 'Suwannaphum';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Suwannaphum'), url(http://themes.googleusercontent.com/static/fonts/suwannaphum/v6/1jIPOyXied3T79GCnSlCN7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
 html {
 	font-size: 75%;
 }
 
 html .mceContentBody {
-	max-width: 625px;
+	max-width: 440px;
 }
 
-body {
+body#tinymce {
 	font-size: 1em;
 	line-height: 1.5;
-	font-family: Helvetica, Arial, sans-serif;
-	color: #333333;
-	vertical-align: baseline;
+	font: 13px/1.5 'Suwannaphum', Arial;
+	color: #5c6771;
+	-webkit-text-size-adjust: 1em; /* 2 */
+    -ms-text-size-adjust: 1em; /* 2 */
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	margin: 0;
 }
 
+/* Selecting color */
+::-moz-selection { background: #f15a23; color: #fff; text-shadow: none; }
+::selection { background: #f15a23; color: #fff; text-shadow: none; }
+
 /* Headings */
-h1 { font-size: 4em; }
-h2 { font-size: 2.8em; }
-h3 { font-size: 2em; }
-h4 { font-size: 1.8em; }
-h5 { font-size: 1.6em; }
-h6 { font-size: 1.4em; }
-h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; margin-top: 0; }
+h1 { font-size: 36px; }
+h2 { font-size: 32px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; margin-top: 0; color:#4d90fe; font-weight: 300; }
 
 /* Links */
 a {

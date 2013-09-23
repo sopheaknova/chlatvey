@@ -75,13 +75,13 @@ body {
 ::selection { background: #f15a23; color: #fff; text-shadow: none; }
 
 /* Some basic settings */
-h1 { font-size: 4em; }
-h2 { font-size: 2.8em; }
-h3 { font-size: 2em; }
-h4 { font-size: 1.8em; }
-h5 { font-size: 1.6em; }
-h6 { font-size: 1.4em; }
-h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; margin-top: 0; color:#4d90fe; }
+h1 { font-size: 36px; }
+h2 { font-size: 32px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+h1,h2,h3,h4,h5,h6{ margin-bottom: 0.3em; margin-top: 0; color:#4d90fe; font-weight: 300; }
 /* Link */
 a, a > * {
 	color: #4d90fe;
