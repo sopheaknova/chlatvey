@@ -48,6 +48,7 @@ jQuery( function($) {
 	
 	$('.show-result-btn').click(function(){
 		$('#timer').hide();
+		clearTimeout(startTimerCount());
 		wp_quiz_results();
 	})
 
@@ -121,7 +122,6 @@ var wp_quiz_results = function(){
         $jq('.entry-body').hide();
         $jq('.show-result-btn').hide();
         $jq('#timer').hide();
-        clearTimeout(startTimerCount());
         $jq("#quiz-panel").hide();
         
     	var total_questions = data.total_questions;

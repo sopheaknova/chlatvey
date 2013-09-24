@@ -141,13 +141,6 @@ $of_options[] = array( 	"name" 		=> "Page Settings",
 						"type" 		=> "heading"
 				);
 					
-$of_options[] = array( 	"name" 		=> "Quiz time",
-						"desc" 		=> "Set duration of quiz. e.g: 5 for 5 minutes",
-						"id" 		=> "quiz_duration",
-						"std" 		=> 5,
-						"type" 		=> "text"
-				);
-				
 $of_options[] = array( 	"name" 		=> "Email",
 						"desc" 		=> "Email address who will get notification from player when they win",
 						"id" 		=> "email_notify",
