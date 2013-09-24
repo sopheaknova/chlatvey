@@ -1102,8 +1102,8 @@ function my_user_profile_edit_action($user) {
 	<tr>
 		<th></th>
 		<td>
-			<input type="text" name="fast_quiz_win" value="<?php echo esc_attr( get_the_author_meta( 'fast_quiz_win', $user->ID ) ); ?>" /><br />
-			<input type="text" name="weekly_quiz_score" value="<?php echo esc_attr( get_the_author_meta( 'weekly_quiz_score', $user->ID ) ); ?>" />
+			<input type="hidden" name="fast_quiz_win" value="<?php echo esc_attr( get_the_author_meta( 'fast_quiz_win', $user->ID ) ); ?>" /><br />
+			<input type="hidden" name="weekly_quiz_score" value="<?php echo esc_attr( get_the_author_meta( 'weekly_quiz_score', $user->ID ) ); ?>" />
 		</td>
 	</tr>
 	</table>
