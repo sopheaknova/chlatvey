@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Chlatvey\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-19 10:55+0700\n"
-"PO-Revision-Date: 2013-09-19 15:54+0700\n"
+"PO-Revision-Date: 2013-09-24 17:12+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -512,7 +512,7 @@ msgstr "ពន្ទុ: "
 #: ../library/functions/theme-functions.php:876
 #: ../library/functions/theme-functions.php:920
 msgid "<p>No users found in the top of weekly quiz</p>"
-msgstr ""
+msgstr "<p>ក្នុងសប្តាហ៍នេះ មិនទាន់មាន អ្នកមាន ពន្ទុខ្ពស់ នៃការលេង សំនួរប្រចាំសប្តាហ៍ទេ</p>"
 
 #: ../library/functions/theme-functions.php:1129
 msgid "forgot password?"
