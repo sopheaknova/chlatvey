@@ -16,6 +16,7 @@ html {
 
 html .mceContentBody {
 	max-width: 440px;
+	padding: 10px;
 }
 
 body#tinymce {

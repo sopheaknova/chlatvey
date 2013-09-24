@@ -53,7 +53,7 @@ function sp_theme_setup() {
 	add_editor_style( SP_ASSETS_THEME . 'css/editor-style.css');
 
 	//
-	if (current_user_can('subscriber')) {
+	if (current_user_can('subscriber') || current_user_can('contributor')) {
 	  show_admin_bar(false);
 	}
 	
@@ -70,37 +70,8 @@ function sp_theme_setup() {
 		'footer-menu'  => __( 'Footer Menu', SP_TEXT_DOMAIN )
 	) );
 
-	// Add support for custom background and set default color
-	add_theme_support( 'custom-background', array(
-		'default-color' => 'f5f5f5',
-		'default-image' => ''
-	) );
-	
-	//custom headers
-	$defaults = array(
-	    // Text color and image (empty to use none).
-		'default-text-color'     => '515151',
-		'default-image'          => '',
-
-		// Set height and width, with a maximum value for the width.
-		'height'                 => 250,
-		'width'                  => 960,
-		'max-width'              => 2000,
-
-		// Support flexible height and width.
-		'flex-height'            => true,
-		'flex-width'             => true,
-		
-		// Callbacks for styling the header and the admin preview. Find more in TwentyTwele theme
-	    'wp-head-callback'       => '',
-	    'admin-head-callback'    => '',
-	    'admin-preview-callback' => '',
-	);
-	add_theme_support( 'custom-header', $defaults );
-
 	// Add suport for post thumbnails and set default sizes
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 800, 9999 ); //Set the default Featured Image
 
 	// Add custom image sizes
 	add_image_size( 'widget', 60, 60, true );
@@ -167,7 +138,8 @@ function sp_scripts_styles() {
 		if ( is_page_template('template-weekly-quiz.php') )
 			$quiz_type_js = 'weekly';
 		
-		$quiz_duration = $smof_data['quiz_duration'];
+		$settings = get_option( "deal_theme_settings" );
+		$quiz_duration = $settings['deal_quiz_time'];
 	 
 	    $config_array = array(
 	 
@@ -417,3 +389,20 @@ function sp_modify_footer_admin () {
 function sp_adminfavicon() {
 echo '<link rel="icon" type="image/x-icon" href="'.SP_BASE_URL.'favicon.ico" />';
 }
+
+//Removing a unused menu and submenu for admin dashboard
+function sp_edit_admin_menus() {  
+
+	if (!current_user_can('manage_options')) {    
+	    remove_menu_page( 'edit-comments.php' );
+	    remove_menu_page( 'link-manager.php' );
+	    remove_menu_page( 'tools.php' );
+	    remove_menu_page( 'plugins.php' );
+	    remove_menu_page( 'users.php' );
+	    remove_menu_page( 'options-general.php' );
+	    remove_menu_page( 'upload.php' );
+	    remove_menu_page( 'edit.php' );
+	    remove_menu_page( 'themes.php' );
+    }
+}  
+add_action( 'admin_menu', 'sp_edit_admin_menus' );

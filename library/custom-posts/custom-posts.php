@@ -2,7 +2,7 @@
 
 //All custom posts
 require_once( SP_BASE_DIR . 'library/custom-posts/cp-quizzes.php' );
-require_once( SP_BASE_DIR . 'library/custom-posts/cp-deals.php' );
+//require_once( SP_BASE_DIR . 'library/custom-posts/cp-deals.php' );
 
 //Taxonomies
 require_once( SP_BASE_DIR . 'library/custom-posts/ct-taxonomies.php' );

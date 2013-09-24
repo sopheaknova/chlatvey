@@ -2,6 +2,7 @@
 /*
 Template Name: Fast quiz
 */
+global $deal_theme_settings;
 ?>
 	
 		

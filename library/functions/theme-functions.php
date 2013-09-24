@@ -209,13 +209,14 @@ function sp_weekly_show_quiz(){
 	
 	if ($user_ID) {
 	
+		$settings = get_option( "deal_theme_settings" );
 		$terms_page = get_page_by_title($smof_data['terms_page']); 
 		$terms_link = get_page_link($terms_page->ID);
 		
 		$html = "<div class='entry-body'>";
 		$html .= "<div id='timer' class='round-6 orange number'></div>";
 		$html .= "<div class='clear'></div>";
-		$html .= "<div class='entry-content'>" . __("Play to save score to win ", SP_TEXT_DOMAIN) . "<span class='deal-title'>" . sp_get_deal_name("deals", "weekly-quiz") . "</span></div>";
+		$html .= "<div class='entry-content'>" . __("Play to save score to win ", SP_TEXT_DOMAIN) . "<span class='deal-title'>" . $settings['deal_weekly_gift'] . "</span></div>";
 		$html .= "<form action='' id='form-start-quiz' method='POST'>";
 		$html .= "<label><input type='checkbox' value='' name='terms_of_services' class='terms-services' />" . __("In order to use our services, you must agree to Chlatvey's <a href='$terms_link' target='_blank'>Terms of Service</a>.", SP_TEXT_DOMAIN) . "</label>";
 		
@@ -289,13 +290,14 @@ function sp_fast_show_quiz(){
 	
 	if ($user_ID) {
 	
+		$settings = get_option( "deal_theme_settings" );
 		$terms_page = get_page_by_title($smof_data['terms_page']); 
 		$terms_link = get_page_link($terms_page->ID);
 		
 		$html = "<div class='entry-body'>";
 		$html .= "<div id='timer' class='round-6 orange number'></div>";
 		$html .= "<div class='clear'></div>";
-		$html .= "<div class='entry-content'>" . __("Play to win ", SP_TEXT_DOMAIN) . "<span class='deal-title'>" . sp_get_deal_name("deals", "fast-quiz") . "</span></div>";
+		$html .= "<div class='entry-content'>" . __("Play to win ", SP_TEXT_DOMAIN) . "<span class='deal-title'>" . $settings['deal_fast_gift'] . "</span></div>";
 		$html .= "<form action='' id='form-start-quiz' method='POST'>";
 		$html .= "<label><input type='checkbox' value='' name='terms_of_services' class='terms-services' />" . __("In order to use our services, you must agree to Chlatvey's <a href='$terms_link' target='_blank'>Terms of Service</a>.", SP_TEXT_DOMAIN) . "</label>";
 		
@@ -384,10 +386,12 @@ function sp_weekly_quiz_result(){
 /* Fast message success */
 function sp_fast_quiz_success(){
 	
+	$settings = get_option( "deal_theme_settings" );
+	
 	$output = '<div id="fast-quiz-success" class="entry-success sky-blue round-6">';
 	$output .= '<h4>' . __('Congratulation!', SP_TEXT_DOMAIN) . '</h4>';
 	$output .= '<p>' . __('You got 5 correct answers. You will get gift', SP_TEXT_DOMAIN) . '</p>';
-	$output .= '<h5>' . sp_get_deal_name("deals", "fast-quiz") . '</h5>';
+	$output .= '<h5>' . $settings['deal_fast_gift'] . '</h5>';
 	$output .= '<p>' . __('Our assistant will contact shortly to give you gift', SP_TEXT_DOMAIN) . '</p>';
 	$output .= '</div>';
 	
@@ -483,7 +487,7 @@ function sp_send_mail_notification($last_name, $first_name, $email, $phone){
 	global $smof_data;
 	
 	$emailTo = $smof_data['email_notify'];
-	$subject = 'Winner name ' . $first_name . ' ' . $last_name;
+	$subject = 'Fast Quiz Winner name ' . $first_name . ' ' . $last_name;
 	$body = "There is player name: $last_name \n\nEmail: $email \n\nPhone: $phone";
 	$headers = 'From: '.$first_name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 	
@@ -1172,5 +1176,209 @@ function add_create_account_link() {
 	$output .= '<a href="' . home_url() . '/wp-login.php?action=register">' . __("Create Account",SP_TEXT_DOMAIN) . '</a>';
 	$output .= '</p>';
     return $output;
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Manage deal name and reset weekly score users
+/* ---------------------------------------------------------------------- */
+if ( is_admin() ) {
+	
+	// schedule the reset_score_weekly_quiz event only once  
+	if( ! wp_next_scheduled( 'reset_weekly_score' ) ) {  
+	   wp_schedule_event( time(), 'Weekly', 'reset_weekly_score' );  
+	}
+	
+	//Add hook function for wp_cron to running the schedules
+	add_action( 'reset_weekly_score', 'update_weekly_quiz_score' );
+	function update_weekly_quiz_score() {
+		global $smof_data;
+		
+		$first_name = 'Ratha';
+		$last_name	= 'Chourng';
+		$email 		= 'chourngratha@gmail.com';
+		$phone 		= '855 93 23 18 81';
+	
+		$emailTo = $smof_data['email_notify'];
+		$subject = 'Weekly Quiz Winner ' . $first_name . ' ' . $last_name;
+		$body = "The winner of Weekly Quiz is: $last_name \n\nEmail: $email \n\nPhone: $phone";
+		$headers = 'From: '.$first_name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
+		
+		mail($emailTo, $subject, $body, $headers);
+		
+		//wp_mail( 'sopheak.peas@gmail.', 'Automatic email', 'Automatic scheduled email from WordPress.');
+	}
+	
+	//Add weekly schedules interval
+	add_filter('cron_schedules', 'reset_weekly_quiz_schedules');
+ 
+	function reset_weekly_quiz_schedules( $schedules ) {
+		$schedules['weekly'] = array(
+			'interval' => 600, //that's how many seconds in a week, for the unix timestamp
+			'display' => __('Weekly')
+		);
+		return $schedules;
+	}
+	
+	// add quiz option menu
+	add_action( 'init', 'deals_admin_init' );
+	add_action('admin_menu', 'add_deals_options');
+	
+	function deals_admin_init() {
+		$settings = get_option( "deal_theme_settings" );
+		if ( empty( $settings ) ) {
+			$settings = array(
+				'deal_intro' => 'Some intro text for the home page',
+				'deal_tag_class' => false,
+				'deal_ga' => false
+			);
+			add_option( "deal_theme_settings", $settings, '', 'yes' );
+		}	
+	}
+	
+	function add_deals_options() {
+			$settings_page = add_menu_page('Deals', 'Deals', 'edit_pages', 'chlatvey-deals', 'deals_custom_options', SP_ASSETS_ADMIN . 'images/icon-deals.png', 39);	
+			add_action( "load-{$settings_page}", 'deal_load_settings_page' );
+	}
+	
+	//Creating The Tabs
+	function deal_admin_tabs( $current = 'homepage' ) { 
+	    $tabs = array( 'homepage' => 'Home', 'weekly-score' => 'Weekly Score' ); 
+	    $links = array();
+	    echo '<div id="icon-themes" class="icon32"><br></div>';
+	    echo '<h2 class="nav-tab-wrapper">';
+	    foreach( $tabs as $tab => $name ){
+	        $class = ( $tab == $current ) ? ' nav-tab-active' : '';
+	        echo "<a class='nav-tab$class' href='?page=chlatvey-deals&tab=$tab'>$name</a>";
+	        
+	    }
+	    echo '</h2>';
+	}
+	
+	//Redirecting The User To The Right Tab
+	function deal_load_settings_page() {
+		if ( $_POST["deal-settings-submit"] == 'Y' ) {
+			check_admin_referer( "deal-settings-page" );
+			deal_save_theme_settings();
+			$url_parameters = isset($_GET['tab'])? 'updated=true&tab='.$_GET['tab'] : 'updated=true';
+			wp_redirect(admin_url('admin.php?page=chlatvey-deals&'.$url_parameters));
+			exit;
+		}
+	}
+	
+	// Saving The Tabbed Fields 
+	function deal_save_theme_settings() {
+		global $pagenow;
+		$settings = get_option( "deal_theme_settings" );
+		
+		if ( $pagenow == 'admin.php' && $_GET['page'] == 'chlatvey-deals' ){ 
+			if ( isset ( $_GET['tab'] ) )
+		        $tab = $_GET['tab']; 
+		    else
+		        $tab = 'homepage'; 
+	
+		    switch ( $tab ){ 
+		        case 'weekly-score' : 
+					$settings['deal_w_score']  = $_POST['deal_w_score'];
+				break;
+				case 'homepage' : 
+					$settings['deal_quiz_time']	  = $_POST['deal_quiz_time'];
+					$settings['deal_fast_gift']	  = $_POST['deal_fast_gift'];
+					$settings['deal_weekly_gift']	  = $_POST['deal_weekly_gift'];
+				break;
+		    }
+		}
+		
+		if( !current_user_can( 'unfiltered_html' ) ){
+			if ( $settings['deal_w_score']  )
+				$settings['deal_w_score'] = stripslashes( esc_textarea( wp_filter_post_kses( $settings['deal_w_score'] ) ) );
+			if ( $settings['deal_quiz_time'] )
+				$settings['deal_quiz_time'] = stripslashes( esc_textarea( wp_filter_post_kses( $settings['deal_quiz_time'] ) ) );
+			if ( $settings['deal_fast_gift'] )
+				$settings['deal_fast_gift'] = stripslashes( esc_textarea( wp_filter_post_kses( $settings['deal_fast_gift'] ) ) );
+			if ( $settings['deal_weekly_gift'] )
+				$settings['deal_weekly_gift'] = stripslashes( esc_textarea( wp_filter_post_kses( $settings['deal_weekly_gift'] ) ) );
+		}
+	
+		$updated = update_option( "deal_theme_settings", $settings );
+	}
+		
+	//Displaying The Tabbed Content
+	function deals_custom_options() {
+		global $pagenow;
+		$settings = get_option( "deal_theme_settings" );
+		?>
+		
+		<div class="wrap">
+			<h2>Manage Chlatvey Deals</h2>
+			
+			<?php
+				if ( 'true' == esc_attr( $_GET['updated'] ) ) echo '<div class="updated" ><p>Data Settings updated.</p></div>';
+				
+				if ( isset ( $_GET['tab'] ) ) deal_admin_tabs($_GET['tab']); else deal_admin_tabs('homepage');
+			?>
+	
+			<div id="poststuff">
+				<form method="post" action="<?php admin_url( 'admin.php?page=chlatvey-deals' ); ?>">
+					<?php
+					wp_nonce_field( "deal-settings-page" ); 
+					
+					if ( $pagenow == 'admin.php' && $_GET['page'] == 'chlatvey-deals' ){ 
+					
+						if ( isset ( $_GET['tab'] ) ) $tab = $_GET['tab']; 
+						else $tab = 'homepage'; 
+						
+						echo '<table class="form-table">';
+						switch ( $tab ){
+							case 'weekly-score' : 
+								?>
+								<tr>
+									<th><label for="deal_w_score">Reset weekly score</label></th>
+									<td>
+										<input type="text" id="deal_w_score" name="deal_w_score" value="<?php echo esc_html( stripslashes( $settings["deal_w_score"] ) ); ?>" /><br/>
+										<span class="description">Enter <strong>reset</strong> to reset weekly quiz score:</span>
+									</td>
+								</tr>
+								<?php
+							break;
+							case 'homepage' : 
+								?>
+								<tr>
+									<th><label for="deal_quiz_time">Quiz time</label></th>
+									<td>
+										<input type="text" id="deal_quiz_time" name="deal_quiz_time" value="<?php echo esc_html( stripslashes( $settings["deal_quiz_time"] ) ); ?>" ><br/>
+										<span class="description">Enter timer for user to play quiz. e.g: 1 = 1 minute</span>
+									</td>
+								</tr>
+								<tr>
+									<th><label for="deal_fast_gift">Fast Quiz Gift</label></th>
+									<td>
+										<input type="text" id="deal_fast_gift" name="deal_fast_gift" value="<?php echo esc_html( stripslashes( $settings["deal_fast_gift"] ) ); ?>" ><br/>
+										<span class="description">Enter the Fast quiz gift. e.g: 100$</span>
+									</td>
+								</tr>
+								<tr>
+									<th><label for="deal_weekly_gift">Weekly Quiz Gift</label></th>
+									<td>
+										<input type="text" id="deal_weekly_gift" name="deal_weekly_gift" value="<?php echo esc_html( stripslashes( $settings["deal_weekly_gift"] ) ); ?>" ><br/>
+										<span class="description">Enter the Weekly quiz gift. e.g: TV Samsung 32''</span>
+									</td>
+								</tr>
+								<?php
+							break;
+						}
+						echo '</table>';
+					}
+					?>
+					<p class="submit" style="clear: both;">
+						<input type="submit" name="Submit"  class="button-primary" value="Update Settings" />
+						<input type="hidden" name="deal-settings-submit" value="Y" />
+					</p>
+				</form>
+			</div>
+	
+		</div>
+	<?php
+	}
+
 }
 
