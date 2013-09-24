@@ -488,7 +488,7 @@ function sp_send_mail_notification($last_name, $first_name, $email, $phone){
 	
 	$emailTo = $smof_data['email_notify'];
 	$subject = 'Fast Quiz Winner name ' . $first_name . ' ' . $last_name;
-	$body = "Dear <strong>Chlatvey Admin</strong> \n\n Today Fast Quiz winner name: $last_name \n\nEmail: $email \n\nPhone: $phone";
+	$body = "Dear Chlatvey Admin \n\n Today Fast Quiz winner name: $last_name \n\nEmail: $email \n\nPhone: $phone";
 	$headers = 'From: '.$first_name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 	
 	mail($emailTo, $subject, $body, $headers);
@@ -1204,7 +1204,7 @@ function update_weekly_quiz_score() {
 		
 		$emailTo = $smof_data['email_notify'];
 		$subject = 'Weekly Quiz Winner ' . $display_name ;
-		$body = "Dear <strong>Chlatvey Admin</strong> \n\n";
+		$body = "Dear Chlatvey Admin \n\n";
 		$body .= "Today Weekly Quiz winner name $display_name sex: $gender \n\n";
 		$body .= "Email: $email \n\n";
 		$body .= "Phone: $phone ";
