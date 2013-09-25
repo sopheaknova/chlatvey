@@ -1326,7 +1326,7 @@ function deals_custom_options() {
 								<th><label for="deal_w_score">Reset weekly score</label></th>
 								<td>
 									<input type="text" id="deal_w_score" name="deal_w_score" /><br/>
-									<span class="description">Enter <strong>reset</strong> to reset weekly quiz score:</span>
+									<span class="description">Enter <strong>reset</strong> to reset weekly quiz score</span>
 								</td>
 							</tr>
 							<?php

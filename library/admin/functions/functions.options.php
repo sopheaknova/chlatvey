@@ -107,6 +107,13 @@ $of_options[] = array( 	"name" 		=> "General Settings",
 						"type" 		=> "heading"
 				);		
 
+$of_options[] = array( 	"name" 		=> "Cover Homepage",
+						"desc" 		=> "Upload a Png/Gif image that will represent on homepage. 460px width and height auto",
+						"id" 		=> "home_cover",
+						"std" 		=> SP_ASSETS_THEME . "images/home-cover.jpg",
+						"type" 		=> "upload"
+				);
+
 $of_options[] = array( 	"name" 		=> "Main Custom Logo",
 						"desc" 		=> "Upload a Png/Gif image that will represent your website's logo.",
 						"id" 		=> "theme_logo",
@@ -119,14 +126,7 @@ $of_options[] = array( 	"name" 		=> "Custom Favicon",
 						"id" 		=> "theme_favico",
 						"std" 		=> SP_BASE_URL . "favicon.ico",
 						"type" 		=> "upload"
-				); 	
-				
-$of_options[] = array( 	"name" 		=> "Cover Homepage",
-						"desc" 		=> "Upload a Png/Gif image that will represent on homepage. 460px width and height auto",
-						"id" 		=> "home_cover",
-						"std" 		=> SP_ASSETS_THEME . "images/home-cover.jpg",
-						"type" 		=> "upload"
-				);							
+				); 								
 				
 				
 $of_options[] = array( 	"name" 		=> "Footer Text",
