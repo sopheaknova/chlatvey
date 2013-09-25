@@ -17,7 +17,8 @@ function sp_widgets_init() {
 	) );
 	
 	// Sidebar Left
-	register_sidebar( array(
+	/*
+register_sidebar( array(
 		'name' 			=> __( 'Sidebar Left', 'sptheme_admin' ),
 		'id' 			=> 'left-sidebar',
 		'description' 	=> __( 'Sidebar Left', 'sptheme_admin' ),
@@ -26,6 +27,7 @@ function sp_widgets_init() {
 		'before_title' 	=> '<div class="widget-title"><h3>',
 		'after_title' 	=> '</h3></div>',
 	) );
+*/
 	
 	// Top Sidebar
 	register_sidebar( array(
@@ -75,14 +77,3 @@ add_action('widgets_init', 'sp_widgets_init');
 
 // Add Add Size Widget
 require_once ( SP_BASE_DIR . 'library/widgets/widget-ads.php' );
-
-/* ---------------------------------------------------------------------- */
-/*	Sidebars Generator
-/* ---------------------------------------------------------------------- */
-
-// Class to generate sidebar on the fly
-require_once( SP_BASE_DIR . 'library/widgets/sidebar-generator.php' );
-/*adds support for the new avia sidebar manager*/
-add_theme_support('avia_sidebar_manager');
-
-if(get_theme_support( 'avia_sidebar_manager' )) new avia_sidebar();
