@@ -877,10 +877,13 @@ function sp_top_user_weekly_quiz(){
 	
 	$output = '<div class="inner-box round-6">';
 	$output .= '<div class="widget-title"><h3>' . __('Top 10 weekly quiz', SP_TEXT_DOMAIN) . '</h3></div>';
-
+	
+	$tbl_usermeta = $wpdb->prefix . 'usermeta';
+	$tbl_users = $wpdb->prefix . 'users';
+	
 	$sql = "SELECT m.user_id, m.meta_key, m.meta_value
-				FROM $wpdb->usermeta m
-				INNER JOIN $wpdb->users u ON (m.user_id = u.ID)
+				FROM " . $tbl_usermeta . " m
+				INNER JOIN " . $tbl_users . " u ON (m.user_id = u.ID)
 				WHERE m.meta_key = 'weekly_quiz_score' AND m.meta_value !=0
 				ORDER BY m.meta_value * 1 DESC";
 					
@@ -891,7 +894,7 @@ function sp_top_user_weekly_quiz(){
 		$output .='<ul class="top-weekly-user">';
 		foreach ( $user_query as $key => $user ) {
 		
-			if (get_the_author_meta( 'wp_user_level', $user->user_id ) == '0'){
+			if (get_the_author_meta( $wpdb->prefix.'user_level', $user->user_id ) == '0'){
 				$profile_img = aq_resize( esc_attr( get_the_author_meta( 'image', $user->user_id ) ), 40, 40, true ); 
 				$output .= '<li>';
 		        $output .= '<div class="post-thumbnail">';
@@ -1212,7 +1215,8 @@ function update_weekly_quiz_score() {
 	
 		if ($max_score !='0'){
 			mail($emailTo, $subject, $body, $headers);
-			$wpdb->update( $wpdb->usermeta, array("meta_value" => 0), array("meta_key" => "weekly_quiz_score") );
+			$tbl_usermeta = $wpdb->prefix . 'usermeta';
+			$wpdb->update( $tbl_usermeta, array("meta_value" => 0), array("meta_key" => "weekly_quiz_score") );
 		}
 	}
 	

@@ -114,7 +114,7 @@ class sp_widget_ads250_250 extends WP_Widget {
 			if ( $title )
 				echo $before_title . '<a href="' . $link . '" title="' . $instance['title'] . '">' . $title . '</a>' . $after_title;
 				
-			$widget_body = '<a href="' . $link . '"><img src="' . $banner_img . '" class="round-6" /></a>';
+			$widget_body = '<a href="' . $link . '" target="_blank"><img src="' . $banner_img . '" class="round-6" /></a>';
 			echo apply_filters( 'widget_text', $widget_body );
 			
 		else:
@@ -213,7 +213,7 @@ class sp_widget_ads250_125 extends WP_Widget {
 			if ( $title )
 				echo $before_title . '<a href="' . $link . '" title="' . $instance['title'] . '">' . $title . '</a>' . $after_title;
 				
-			$widget_body = '<a href="' . $link . '"><img src="' . $banner_img . '" class="round-6" /></a>';
+			$widget_body = '<a href="' . $link . '" target="_blank"><img src="' . $banner_img . '" class="round-6" /></a>';
 			echo apply_filters( 'widget_text', $widget_body );
 			
 		else:
@@ -312,7 +312,7 @@ class sp_widget_ads960_120 extends WP_Widget {
 			if ( $title )
 				echo $before_title . '<a href="' . $link . '" title="' . $instance['title'] . '">' . $title . '</a>' . $after_title;
 				
-			$widget_body = '<a href="' . $link . '"><img src="' . $banner_img . '" class="round-6" /></a>';
+			$widget_body = '<a href="' . $link . '" target="_blank"><img src="' . $banner_img . '" class="round-6" /></a>';
 			echo apply_filters( 'widget_text', $widget_body );
 			
 		else:
@@ -413,7 +413,7 @@ class sp_widget_ads460_120 extends WP_Widget {
 			if ( $title )
 				echo $before_title . '<a href="' . $link . '" title="' . $instance['title'] . '">' . $title . '</a>' . $after_title;
 				
-			$widget_body = '<a href="' . $link . '"><img src="' . $banner_img . '" class="round-6" /></a>';
+			$widget_body = '<a href="' . $link . '" target="_blank"><img src="' . $banner_img . '" class="round-6" /></a>';
 			echo apply_filters( 'widget_text', $widget_body );
 			
 		else:
