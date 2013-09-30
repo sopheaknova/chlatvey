@@ -48,7 +48,7 @@ jQuery( function($) {
 	
 	$('.show-result-btn').click(function(){
 		$('#timer').hide();
-		clearTimeout(startTimerCount());
+		clearTimeout(quiz_timer);
 		wp_quiz_results();
 	})
 
@@ -58,7 +58,7 @@ function pretty_time_string(num) {
     return ( num < 10 ? "0" : "" ) + num;
  }
 
-var startTimerCount = function() {
+function startTimerCount() {
 		
 	duration--;
 	$minute = Math.floor(duration/60);
@@ -73,11 +73,11 @@ var startTimerCount = function() {
         wp_quiz_results();
         return;
     }
-    setTimeout("startTimerCount()",1000);
+    quiz_timer = setTimeout("startTimerCount()",1000);
 }
 
 
-var wp_quiz_results = function(){
+var wp_quiz_results = function (){
 	
 	var selected_answers = {};
     $jq(".ques-answers").each(function(){

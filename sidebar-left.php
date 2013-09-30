@@ -65,6 +65,10 @@
 
 <?php echo sp_top_user_weekly_quiz();?>
 
+<div class="inner-box round-6">
+	<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fchlatvey&amp;width=200&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=false&amp;appId=510408359006777" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:290px;" allowTransparency="true"></iframe>
+</div>
+
 <?php if ( is_active_sidebar( 'left-sidebar' ) ) dynamic_sidebar('left-sidebar'); ?>
 		
 </aside> <!--End #sidebar-left-->	
