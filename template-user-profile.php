@@ -42,9 +42,7 @@ if ($user_ID) {
 	                'post_status' => 'inherit'
 	            );
 	           	$attach_id = wp_insert_attachment( $attachment, $filename);
-	           	
-	           	echo $profile_photo;
-	                                    
+	           	                        
 	            update_user_meta($this_user->ID, "image", $profile_photo);
 	        }
 	    }

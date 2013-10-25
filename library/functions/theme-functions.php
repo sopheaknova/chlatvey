@@ -890,11 +890,11 @@ function sp_top_user_weekly_quiz(){
 	$user_query = $wpdb->get_results($sql);
 	
 	if ( ! empty( $user_query ) ) {
-	
+		$count = 1;
 		$output .='<ul class="top-weekly-user">';
 		foreach ( $user_query as $key => $user ) {
 		
-			if (get_the_author_meta( $wpdb->prefix.'user_level', $user->user_id ) == '0'){
+			if ( (get_the_author_meta( $wpdb->prefix.'user_level', $user->user_id ) == '0') && $count <= 10 ){
 				$profile_img = aq_resize( esc_attr( get_the_author_meta( 'image', $user->user_id ) ), 40, 40, true ); 
 				$output .= '<li>';
 		        $output .= '<div class="post-thumbnail">';
@@ -909,7 +909,8 @@ function sp_top_user_weekly_quiz(){
 				$output .= '</p>';
 				$output .= '</li>';
 			}	
-
+			
+			$count++;	
 		}
 		$output .= '</ul>';
 	} else {
