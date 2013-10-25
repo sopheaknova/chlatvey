@@ -123,7 +123,7 @@ $of_options[] = array( 	"name" 		=> "Main Custom Logo",
 				
 $of_options[] = array( 	"name" 		=> "Custom Favicon",
 						"desc" 		=> "Upload a 16px x 16px Png/Gif image that will represent your website's favicon.",
-						"id" 		=> "theme_favico",
+						"id" 		=> "theme_favicon",
 						"std" 		=> SP_BASE_URL . "favicon.ico",
 						"type" 		=> "upload"
 				); 								
