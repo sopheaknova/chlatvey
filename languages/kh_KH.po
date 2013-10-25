@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chlatvey\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-19 10:55+0700\n"
-"PO-Revision-Date: 2013-09-24 17:12+0700\n"
+"POT-Creation-Date: 2013-10-25 15:45+0700\n"
+"PO-Revision-Date: 2013-10-25 15:47+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -78,11 +78,11 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: ../sidebar-left.php:13 ../template-user-profile.php:110
+#: ../sidebar-left.php:13 ../template-user-profile.php:108
 msgid "Username"
 msgstr ""
 
-#: ../sidebar-left.php:14 ../template-user-profile.php:114
+#: ../sidebar-left.php:14 ../template-user-profile.php:112
 #: ../library/meta-box/demo/demo.php:108
 msgid "Password"
 msgstr ""
@@ -99,29 +99,25 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
-#: ../sidebar-left.php:49
+#: ../sidebar-left.php:56
 msgid "Edit profile"
 msgstr ""
 
-#: ../sidebar-left.php:50
+#: ../sidebar-left.php:57
 msgid "Logout"
 msgstr ""
 
-#: ../sidebar-left.php:52
-msgid "New gift fast quiz"
-msgstr "រង្វាន់ឈ្នះភ្លាមថ្មី:"
+#: ../sidebar-left.php:59
+msgid "Fast quiz score"
+msgstr "ពន្ទុសំនួរប្រចាំថ្ងៃ:"
 
-#: ../sidebar-left.php:52
-msgid " Gifts"
-msgstr " រង្វាន់"
-
-#: ../sidebar-left.php:53
-msgid "Weekly quiz score"
-msgstr "ពន្ទុប្រចាំសប្តាហ៍:"
-
-#: ../sidebar-left.php:53
+#: ../sidebar-left.php:59 ../sidebar-left.php:60
 msgid " points"
 msgstr " ពន្ទុ"
+
+#: ../sidebar-left.php:60
+msgid "Weekly quiz score"
+msgstr "ពន្ទុសំនួរប្រចាំសប្តាហ៍:"
 
 #: ../sidebar.php:9
 msgid "About Right Sidebar"
@@ -146,39 +142,39 @@ msgstr ""
 msgid "E-mail address:"
 msgstr ""
 
-#: ../template-user-profile.php:55
+#: ../template-user-profile.php:53
 msgid "This e-mail is already in use, please use another one."
 msgstr ""
 
-#: ../template-user-profile.php:55
+#: ../template-user-profile.php:53
 msgid "Back"
 msgstr ""
 
-#: ../template-user-profile.php:118 ../library/meta-box/demo/demo.php:239
+#: ../template-user-profile.php:116 ../library/meta-box/demo/demo.php:239
 msgid "Email"
 msgstr ""
 
-#: ../template-user-profile.php:132
+#: ../template-user-profile.php:137
 msgid "Frist name"
 msgstr ""
 
-#: ../template-user-profile.php:137
+#: ../template-user-profile.php:142
 msgid "Last name"
 msgstr ""
 
-#: ../template-user-profile.php:141
+#: ../template-user-profile.php:146
 msgid "Gender"
 msgstr ""
 
-#: ../template-user-profile.php:148
+#: ../template-user-profile.php:153
 msgid "Phone number"
 msgstr ""
 
-#: ../template-user-profile.php:152 ../library/meta-box/demo/map.php:13
+#: ../template-user-profile.php:157 ../library/meta-box/demo/map.php:13
 msgid "Address"
 msgstr ""
 
-#: ../template-user-profile.php:156
+#: ../template-user-profile.php:161
 msgid "About"
 msgstr ""
 
@@ -353,13 +349,13 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: ../library/functions/setup-theme.php:241
+#: ../library/functions/setup-theme.php:220
 #, php-format
 msgid "Search results for %s"
 msgstr ""
 
-#: ../library/functions/setup-theme.php:244
-#: ../library/functions/setup-theme.php:258
+#: ../library/functions/setup-theme.php:223
+#: ../library/functions/setup-theme.php:237
 #, php-format
 msgid "Page %s"
 msgstr ""
@@ -422,103 +418,96 @@ msgstr ""
 msgid " | "
 msgstr ""
 
-#: ../library/functions/theme-functions.php:218
+#: ../library/functions/theme-functions.php:219
 msgid "Play to save score to win "
 msgstr "ឆ្លើយសន្សំពន្ទុ ដើម្បីឈ្នះរង្វាន់ប្រចាំសប្តាហ៍ "
 
-#: ../library/functions/theme-functions.php:222
-#: ../library/functions/theme-functions.php:302
+#: ../library/functions/theme-functions.php:223
+#: ../library/functions/theme-functions.php:304
 msgid "Start Now"
 msgstr "ចាប់ផ្តើមឆ្លើយសំនួរ"
 
-#: ../library/functions/theme-functions.php:248
-#: ../library/functions/theme-functions.php:328
+#: ../library/functions/theme-functions.php:249
+#: ../library/functions/theme-functions.php:330
 msgid "Question number "
 msgstr "សំនួរទី "
 
-#: ../library/functions/theme-functions.php:270
+#: ../library/functions/theme-functions.php:271
 #: ../library/functions/theme-functions.php:352
 msgid "Result"
 msgstr "បង្ហាញលទ្ធផល"
 
-#: ../library/functions/theme-functions.php:274
-#: ../library/functions/theme-functions.php:356
+#: ../library/functions/theme-functions.php:275
+#: ../library/functions/theme-functions.php:355
 msgid "Continue play to be winner"
 msgstr "បន្តឆ្លើយសំនួរផ្សេងទៀតដើម្បីបន្តឈ្នះរង្វាន់"
 
-#: ../library/functions/theme-functions.php:279
-#: ../library/functions/theme-functions.php:361
+#: ../library/functions/theme-functions.php:280
+#: ../library/functions/theme-functions.php:360
 msgid "You must login to play quiz."
 msgstr ""
 
-#: ../library/functions/theme-functions.php:298
+#: ../library/functions/theme-functions.php:300
 msgid "Play to win "
 msgstr "ឆ្លើយដើម្បីឈ្នះ "
 
-#: ../library/functions/theme-functions.php:376
+#: ../library/functions/theme-functions.php:375
 msgid "You have completed answer weekly quiz and Your total score"
 msgstr "អ្នកបានបពា្ចប់ឆ្លើយសំនួរប្រចាំសប្តាហ៍ <br />ពន្ទុសរុបប្រចាំសប្តាហ៍របស់អ្នក"
 
-#: ../library/functions/theme-functions.php:377
+#: ../library/functions/theme-functions.php:376
+#: ../library/functions/theme-functions.php:390
 msgid "Points"
 msgstr " ពន្ទុ"
 
-#: ../library/functions/theme-functions.php:388
-msgid "Congratulation!"
-msgstr "សូមជួយអបអរសាទរ!"
-
 #: ../library/functions/theme-functions.php:389
-msgid "You got 5 correct answers. You will get gift"
-msgstr "អ្នកបានឆ្លើយ សំនួរឈ្នះភ្លាម ត្រឹមត្រូវទាំង <br />៥សំនួរ អ្នកនឹងទទួលបានរង្វាន់"
+msgid "You have completed answer daily quiz and Your total score"
+msgstr "អ្នកបានបពា្ចប់ឆ្លើយសំនួរប្រចាំថ្ងៃ <br />ពន្ទុសរុបសំនួរប្រចាំថ្ងៃរបស់អ្នក"
 
-#: ../library/functions/theme-functions.php:391
-msgid "Our assistant will contact shortly to give you gift"
-msgstr "សហការីយើងខ្ញុំនិងទំនាក់ទនងអ្នកក្នុងពេលឆាប់ៗ <br />ដើម្បីផ្តល់ជូនរង្វាន់"
-
-#: ../library/functions/theme-functions.php:401
+#: ../library/functions/theme-functions.php:400
 msgid "Sorry!"
 msgstr "សូមអភ័យទោស!"
 
-#: ../library/functions/theme-functions.php:402
+#: ../library/functions/theme-functions.php:401
 msgid "Your answer are not correctly at all."
 msgstr ""
 "សំនួរឈ្នះភ្លាម តម្រូវអោយអ្នកឆ្លើយត្រឹមត្រូវគ្រប់ប្រាំសំនួរ បុ៉ន្តែចម្លើយរបស់អ្នកមិនត្រឹមត្រូវទាំងអស់ទេ"
 
-#: ../library/functions/theme-functions.php:534
+#: ../library/functions/theme-functions.php:571
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: ../library/functions/theme-functions.php:696
-#: ../library/functions/theme-functions.php:780
+#: ../library/functions/theme-functions.php:733
+#: ../library/functions/theme-functions.php:817
 msgid "Previous"
 msgstr ""
 
-#: ../library/functions/theme-functions.php:706
-#: ../library/functions/theme-functions.php:790
+#: ../library/functions/theme-functions.php:743
+#: ../library/functions/theme-functions.php:827
 msgid "Next"
 msgstr ""
 
-#: ../library/functions/theme-functions.php:846
-#: ../library/functions/theme-functions.php:887
+#: ../library/functions/theme-functions.php:883
+#: ../library/functions/theme-functions.php:932
 msgid "Top 10 weekly quiz"
 msgstr "លំដាប់ពន្ទុសំនួរប្រចាំសប្តាហ៍"
 
-#: ../library/functions/theme-functions.php:868
-#: ../library/functions/theme-functions.php:914
+#: ../library/functions/theme-functions.php:912
+#: ../library/functions/theme-functions.php:963
 msgid "Score: "
 msgstr "ពន្ទុ: "
 
-#: ../library/functions/theme-functions.php:876
-#: ../library/functions/theme-functions.php:920
+#: ../library/functions/theme-functions.php:921
+#: ../library/functions/theme-functions.php:969
 msgid "<p>No users found in the top of weekly quiz</p>"
 msgstr "<p>ក្នុងសប្តាហ៍នេះ មិនទាន់មាន អ្នកមាន ពន្ទុខ្ពស់ នៃការលេង សំនួរប្រចាំសប្តាហ៍ទេ</p>"
 
-#: ../library/functions/theme-functions.php:1129
+#: ../library/functions/theme-functions.php:1178
 msgid "forgot password?"
 msgstr ""
 
-#: ../library/functions/theme-functions.php:1135
+#: ../library/functions/theme-functions.php:1184
 msgid "Create Account"
 msgstr ""
 
@@ -968,18 +957,29 @@ msgstr ""
 msgid "Sidebar Right"
 msgstr ""
 
-#: ../library/widgets/widgets.php:21 ../library/widgets/widgets.php:23
-msgid "Sidebar Left"
-msgstr ""
-
-#: ../library/widgets/widgets.php:32 ../library/widgets/widgets.php:34
+#: ../library/widgets/widgets.php:34 ../library/widgets/widgets.php:36
 msgid "Top Sidebar"
 msgstr ""
 
-#: ../library/widgets/widgets.php:43 ../library/widgets/widgets.php:45
+#: ../library/widgets/widgets.php:45 ../library/widgets/widgets.php:47
 msgid "Content Sidebar"
 msgstr ""
 
-#: ../library/widgets/widgets.php:54 ../library/widgets/widgets.php:56
+#: ../library/widgets/widgets.php:56 ../library/widgets/widgets.php:58
 msgid "Footer Sidebar"
 msgstr ""
+
+#~ msgid "New gift fast quiz"
+#~ msgstr "រង្វាន់ឈ្នះភ្លាមថ្មី:"
+
+#~ msgid " Gifts"
+#~ msgstr " រង្វាន់"
+
+#~ msgid "Congratulation!"
+#~ msgstr "សូមជួយអបអរសាទរ!"
+
+#~ msgid "You got 5 correct answers. You will get gift"
+#~ msgstr "អ្នកបានឆ្លើយ សំនួរឈ្នះភ្លាម ត្រឹមត្រូវទាំង <br />៥សំនួរ អ្នកនឹងទទួលបានរង្វាន់"
+
+#~ msgid "Our assistant will contact shortly to give you gift"
+#~ msgstr "សហការីយើងខ្ញុំនិងទំនាក់ទនងអ្នកក្នុងពេលឆាប់ៗ <br />ដើម្បីផ្តល់ជូនរង្វាន់"

@@ -10,6 +10,7 @@ jQuery( function($) {
 	$('.show-result-btn').hide();
 	$('.continue-quiz').hide();
 	$('#weekly-result-info').hide();
+	$('#fast-result-info').hide();
 	$('#fast-quiz-success').hide();
 	$('#fast-quiz-fail').hide();
 	
@@ -110,6 +111,12 @@ var wp_quiz_results = function (){
 	    	$jq('#fast-quiz-fail').show();
     	}
 
+        if (quiz_type == 'fast'){
+			$jq('.fast-score').html( parseInt($jq('.fast-score').text())+data.score );
+			$jq('.fast-quiz-win').html( parseInt($jq('.fast-quiz-win').text())+data.score );
+			$jq('#fast-result-info').show();
+		}
+        
         if (quiz_type == 'weekly'){
 			$jq('.weekly-score').html( parseInt($jq('.weekly-score').text())+data.score );
 			$jq('.weekly-score-profile').html( parseInt($jq('.weekly-score-profile').text())+data.score );

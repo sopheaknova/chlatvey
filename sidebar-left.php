@@ -56,7 +56,7 @@
 		echo '<a href="' . get_page_link($page->ID) . '">' . __( 'Edit profile', SP_TEXT_DOMAIN ) . '</a><br />';
 	    echo '<a href="' . wp_logout_url( home_url() ) . '">' . __( 'Logout', SP_TEXT_DOMAIN ) . '</a></p>';
 	    echo '<div class="clear"></div>';
-	    echo '<div class="fast-quiz-info">' . __( 'New gift fast quiz', SP_TEXT_DOMAIN ) . '<div class="round-6"><span class="fast-quiz-win">' . $fast_quiz_win . '</span>' . __( ' Gifts', SP_TEXT_DOMAIN ) . '</div></div>';
+	    echo '<div class="fast-quiz-info">' . __( 'Fast quiz score', SP_TEXT_DOMAIN ) . '<div class="round-6"><span class="fast-quiz-win">' . $fast_quiz_win . '</span>' . __( ' points', SP_TEXT_DOMAIN ) . '</div></div>';
 	    echo '<div class="weekly-quiz-info">' . __( 'Weekly quiz score', SP_TEXT_DOMAIN ) . '<div class="round-6"><span class="weekly-score-profile">' . $weekly_quiz_score . '</span>' . __( ' points', SP_TEXT_DOMAIN ) . '</div></div>';
 	}//end if not user	
 	

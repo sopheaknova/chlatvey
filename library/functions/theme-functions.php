@@ -347,12 +347,9 @@ function sp_fast_show_quiz(){
 	            $html .= "<div class='quiz-nav'></div>";
 	    $html .= "</div><!-- #quiz_panel -->";
 		
-		$html .= sp_fast_quiz_success();
-		
-		$html .= sp_fast_quiz_fail();
+		$html .= sp_fast_quiz_result();
 		
 		$html .= "<div class='show-result-btn sky-blue round-6'>" . __('Result', SP_TEXT_DOMAIN) . "</div>";
-        $html .= "<div id='quiz-result'></div>";
         
         $html .= "<div class='continue-quiz'>";
         $html .= "<p>" . __('Continue play to be winner', SP_TEXT_DOMAIN) . "</p>";
@@ -384,15 +381,13 @@ function sp_weekly_quiz_result(){
 
 
 /* Fast message success */
-function sp_fast_quiz_success(){
+function sp_fast_quiz_result(){
 	
-	$settings = get_option( "deal_theme_settings" );
+	$this_user = wp_get_current_user();
 	
-	$output = '<div id="fast-quiz-success" class="entry-success sky-blue round-6">';
-	$output .= '<h4>' . __('Congratulation!', SP_TEXT_DOMAIN) . '</h4>';
-	$output .= '<p>' . __('You got 5 correct answers. You will get gift', SP_TEXT_DOMAIN) . '</p>';
-	$output .= '<h5>' . $settings['deal_fast_gift'] . '</h5>';
-	$output .= '<p>' . __('Our assistant will contact shortly to give you gift', SP_TEXT_DOMAIN) . '</p>';
+	$output = '<div id="fast-result-info" class="entry-success sky-blue round-6">';
+	$output .= '<p>' . __('You have completed answer daily quiz and Your total score', SP_TEXT_DOMAIN) . '</p>';
+	$output .= '<h5><span class="fast-score">' . get_the_author_meta( 'fast_quiz_win', $this_user->ID ) . ' </span><span class="attr">' . __('Points', SP_TEXT_DOMAIN) . '</span></h5>';
 	$output .= '</div>';
 	
 	return $output;
@@ -455,7 +450,15 @@ function get_quiz_results() {
     }
 
     //update score to user meta field
-    if ($quiz_type == 'fast' && $score == '5'):
+    if ($quiz_type == 'fast'):
+    	update_user_meta( $this_user->ID , 'fast_quiz_win', ($fast_score+$score) );
+	elseif ($quiz_type == 'weekly') :
+		update_user_meta( $this_user->ID , 'weekly_quiz_score', ($weekly_score+$score) );
+	endif;
+	
+    // work with fast quiz of 5 correction answers
+    /*
+if ($quiz_type == 'fast' && $score == '5'):
     	
     	$first_name = get_the_author_meta( 'user_firstname', $this_user->ID );
     	$last_name = get_the_author_meta( 'user_lastname', $this_user->ID );
@@ -466,7 +469,8 @@ function get_quiz_results() {
 		sp_send_mail_notification($first_name, $last_name, $email, $phone);
 	elseif ($quiz_type == 'weekly') :
 		update_user_meta( $this_user->ID , 'weekly_quiz_score', ($weekly_score+$score) );
-	endif;	
+	endif;
+*/	
     
     $total_questions = count($question_answers);
 
