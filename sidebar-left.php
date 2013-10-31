@@ -1,5 +1,7 @@
 <aside id="sidebar-left" class="widget-area" role="complementary">
-
+	<div class="new-fb-btn new-fb-1 new-fb-default-anim"><div class="new-fb-1-1"><div class="new-fb-1-1-1">
+	<a href="http://www.chlatvey.com/wp-login.php?loginFacebook=1&redirect=http://www.chlatvey.com" onclick="window.location = 'http://www.chlatvey.com/wp-login.php?loginFacebook=1&redirect='+window.location.href; return false;">CONNECT WITH</a>
+	</div></div></div>
 <?php 
 	global $user_ID, $user_identity, $smof_data; 
 	
